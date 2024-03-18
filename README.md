@@ -1,26 +1,14 @@
-Join the official Discord server:
-https://www.discord.gg/eYRBsaECzY
+# Edited BAF
 
-# BAF
-
-You found the Best Auto Flipper (BAF) for hypixel Skyblock
-Note: This code is a headless (no user interface) Minecraft client and has features sending custom packages to the server to compete with other macroers. This is against the Hypixel Terms of Service.
-Hypixel currently doesn't ban for doing so but has all the rights to start doing it without notice so use this with caution.
+My attempt to edit Luiz-Baf and port it into the new version.
 
 ## Is this bannable
 
-Yes, it is against the TOS of Hypixel, so don't use it if you don't want to risk that.
+Yes, it is against the TOS of Hypixel, so don't use it if you don't want to risk that. Futhermore, this is my edit and I'm barely capable of coding.
 
-## Is this a RAT
+## Note
 
-No, you can check the code yourself. The bot itself doesn't touch your credentials it uses the authentication API of mineflayer to handle that.
-As far as I am aware mineflayer only stores the credentials in `.minecraft/nmp-cache`. So if you want to connect a different account or remove the stored credentials for some other reason, remove this folder. (https://github.com/PrismarineJS/mineflayer/discussions/2392)
-
-## Requirements
-
--   The bot teleports you to your island. You need an active Booster Cookie to purchase auctions outside of the hub.
--   The bot does not take money out of your bank, so make sure to have coins in your purse
--   Purchased flips may stay in the inventory for a bit before being relisted. Make sure to have some space so you don't fill up your inventory after a few flips.
+-   Keep money in your purse and have booster cookie active gang
 
 ## Getting Started
 
@@ -56,32 +44,14 @@ chmod +x BAF-$version-linux
 ./BAF-$version-linux
 ```
 
-## How does it work
-
--   On the first start, enter your Ingame name, this is needed for the authentication
--   Connect your Minecraft account by posting the link the bot gives you into your browser
--   After you are authenticated, the bot should join Hypixel and teleports itself to your island
--   After that, it automatically buys and sells flips
--   => Profit
 
 ## Configuration
 
 The bot creates a config.toml file after the first start. This file contains configuration properties for the bot. Currently, only the ingame username is stored, so you don't need to enter it every time. I may add more configurations in the future. The Cofl configurations apply as normal.
 <br/> NOTE: The mod uses the Median price (minus a bit to sell faster) to auto-sell
 
-## System Requirements
-
--   Any operating system
--   500MB of RAM
--   1 core of your CPU
--   Stable ping, preferably under 200ms - it measures your ping and sends actions ahead of time to arrive as close on time as possible
--   Some paid plan from sky.coflnet.com
 
 ## Webhook
 
 You can add a Webhook URL into your config.toml to get different notifications (init, selling, purchasing, relisting).
 Just add the line `WEBHOOK_URL = "YOUR_URL"` into your config. Make sure to place it above the sessions part (will be created automatically on your first start).
-
-## Logging
-
-If there is something wrong with the bot and you plan to report it, please add your log file
