@@ -46,10 +46,11 @@ export async function tryToTeleportToIsland(bot: MyBot, delayBeforeTeleport = 50
     let scoreboard = bot.scoreboard.sidebar.items.map(item => item.displayName.getText(null).replace(item.name, ''))
     if (!scoreboard.find(e => e.includes('Your Island'))) {
         await sleep(delayBeforeTeleport)
-        log('Bot is not on island. Warping back')
-        printMcChatToConsole('§f[§4BAF§f]: §fYou seem to not be on your island.')
-        printMcChatToConsole('§f[§4BAF§f]: §fWarping back to island...')
-        bot.chat('/is')
+        log('Bot is not on garden. Warping back')
+        printMcChatToConsole('§f[§4BAF§f]: §fYou seem to not be on your garden.')
+        printMcChatToConsole('§f[§4BAF§f]: §fWarping back to garden...')
+        //Warps to Garden instead of Private Island
+        bot.chat('/warp garden')
         return true
     }
     return false
