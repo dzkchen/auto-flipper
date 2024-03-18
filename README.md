@@ -12,46 +12,46 @@ Yes, it is against the TOS of Hypixel, so don't use it if you don't want to risk
 
 ## Getting Started
 
-### Executable
+### BAF with Node Guide
 
-For Windows there is a PowerShell-Script "BAF.ps1". This script automatically downloads/updates and starts the newest version from GitHub and saves it at `%appdata$/BAF`. Created files like the config and log file are also stored there. You can execute it by right-clicking and "Run with PowerShell".
+The OS that I use on my VPS is Linux Ubuntu 22.04 x86 64 Min Gen2 V1
 
-You can also paste this command into the PowerShell to run the script: `Invoke-Expression (New-Object System.Net.WebClient).DownloadString("https://raw.githubusercontent.com/Hannesimo/auto-flipper/master/start_script/BAF.ps1`. This command downloads the Script and executes it.
+#### Basic Cmds for VPS:
 
-If you want to start the .exe yourself, make sure to open the PowerShell and execute the program with `./BAF-[version]-win.exe`. Don't just run it by double clicking as it will use the Windows CMD and there seems to be an internal issue with the npm minecraft-protocol package and CMD causing the bot to timeout after a while.
+ls - show what files are in the directory you are, useful for if you are lost
+cd - allows you to go into a directory (eg. cd luiz-baf)
+cd -  - allows you to get back one directory
+npm run start - you will use this whenever you want to start BAF after you have built it
 
-Tutorial on how to open PowerShell: https://www.youtube.com/watch?v=aLwq9AggFw8&t=1s
+### Tutorial
 
-For Mac/Linux just execute the corresponding files as usual. I am not aware of similar issues there.
+1. sudo apt install nodejs (say yes to any prompts)
+2. sudo apt install npm (say yes to any prompts)
+3. sudo apt install curl
+4. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+5. source ~/.bashrc
+6. nvm install v20.10.0
+7. git clone https://github.com/dzkchen/shit-flipper
+8. Navigate to Shit Flipper Folder (cd shit-flipper)
+9. npm i 
+10. npm run start
 
-### Node
+### Editing the config
+1. cd shit-flipper
+2. cd build
+3. nano config.toml
+Edit any config
 
-To run or build the code, you need Node and npm.
+## New Features
 
--   To run it just execute `npm install` followed by `npm run start`<br/><br/>
--   To build the executables the following command for the following OS:
-    -   Windows: `npm run build-executables-win`
-    -   Linux: `npm run build-executables-linux`
+- Warp to garden instead of island (workaround for slime minion optimization)
 
-NOTE: You only need this if you want to build the code yourself. If you are using a executable, you can ignore the node steps.
-
-### Linux
-To execute on linux use the following (and follow the input requests)
-```bash
-version=1.1.9
-wget -c https://github.com/Hannesimo/auto-flipper/releases/download/$version/BAF-$version-linux
-chmod +x BAF-$version-linux 
-./BAF-$version-linux
-```
-
-
-## Configuration
-
-The bot creates a config.toml file after the first start. This file contains configuration properties for the bot. Currently, only the ingame username is stored, so you don't need to enter it every time. I may add more configurations in the future. The Cofl configurations apply as normal.
-<br/> NOTE: The mod uses the Median price (minus a bit to sell faster) to auto-sell
+- Luiz-BAF port in 2-5 business days (NOT DONE)
 
 
-## Webhook
+## Roadmap
 
-You can add a Webhook URL into your config.toml to get different notifications (init, selling, purchasing, relisting).
-Just add the line `WEBHOOK_URL = "YOUR_URL"` into your config. Make sure to place it above the sessions part (will be created automatically on your first start).
+- Implment Luiz-BAF 
+- More webhook + info 
+- Bug fixes (/cofl ping etc)
+- I don't know what else (suggest some pretty please)
