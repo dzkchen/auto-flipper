@@ -34,16 +34,27 @@ export async function flipHandler(bot: MyBot, flip: Flip) {
         )} coins (Target: ${numberWithThousandsSeparators(flip.target)})`
     )
 
-    if (getConfigProperty('USE_WINDOW_SKIPS')) {
-        useWindowSkipPurchase(flip, isBed)
-
-        // clear timeout after 1sec, so there are no weird overlaps that mess up the windowIds
-        setTimeout(() => {
-            bot.state = null
-            clearTimeout(timeout)
-        }, 2500)
-    } else {
-        useRegularPurchase(bot)
+    if (isBed) {
+        let cofl = Math.abs(new Date().getTime() - flip.purchaseAt.getTime())
+        printMcChatToConsole('Debug: Attempting to spam the bed')
+        bot.addListener('windowOpen', async (window) => {
+            let title = getWindowTitle(window)
+            if (title.toString().includes('BIN Auction View')) {
+                printMcChatToConsole('Debug: Click Bed lol')
+                const delay = cofl - 500
+                await sleep(delay)
+                for (let x = 0; x < 5; x++) {
+                    clickWindow(bot, 31)
+                    await sleep(100)
+                }
+            }
+            if (title.toString().includes('Confirm Purchase')) {
+                clickWindow(bot, 11)
+                bot.removeAllListeners('windowOpen')
+                bot.state = null
+                return
+            }
+        })
     }
 }
 
@@ -65,13 +76,5 @@ async function useRegularPurchase(bot: MyBot) {
 }
 
 async function useWindowSkipPurchase(flip: Flip, isBed: boolean) {
-    let lastWindowId = getFastWindowClicker().getLastWindowId()
-
-    if (isBed) {
-        getFastWindowClicker().clickBedPurchase(flip.startingBid, lastWindowId + 1)
-    } else {
-        getFastWindowClicker().clickPurchase(flip.startingBid, lastWindowId + 1)
-    }
-    await sleep(getConfigProperty('FLIP_ACTION_DELAY'))
-    getFastWindowClicker().clickConfirm(flip.startingBid, flip.itemName, lastWindowId + 2)
+//Bans if this is enabled
 }
