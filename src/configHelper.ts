@@ -7,13 +7,14 @@ var toml = require('toml')
 let config: Config = {
     INGAME_NAME: '',
     WEBHOOK_URL: '',
-    FLIP_ACTION_DELAY: 100,
+    FLIP_ACTION_DELAY: 0,
     ENABLE_CONSOLE_INPUT: true,
-    USE_COFL_CHAT: true,
+    USE_COFL_CHAT: false,
     SESSIONS: {},
     // this is bannable do not use
     USE_WINDOW_SKIPS: false,
-    WEBSOCKET_URL: 'wss://sky.coflnet.com/modsocket'
+    WEBSOCKET_URL: 'ws://sky-us.coflnet.com/modsocket'
+    //uses US socket instead
 }
 
 json2toml({ simple: true })
