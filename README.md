@@ -54,4 +54,5 @@ Edit any config
 - Implment Luiz-BAF 
 - More webhook + info 
 - Bug fixes (/cofl ping etc)
+- More config options (warp island or warp garden, finna be easy (maybe))
 - I don't know what else (suggest some pretty please)
