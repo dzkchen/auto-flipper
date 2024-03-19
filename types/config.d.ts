@@ -11,6 +11,8 @@ interface Config {
     SESSIONS: SESSIONS
     USE_WINDOW_SKIPS: boolean
     WEBSOCKET_URL: string
+    DELAY_BETWEEN_CLICKS: number
+    DELAY_TO_REMOVE_BED: number
 }
 
 interface ColfSession {

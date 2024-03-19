@@ -13,8 +13,10 @@ let config: Config = {
     SESSIONS: {},
     // this is bannable do not use
     USE_WINDOW_SKIPS: false,
-    WEBSOCKET_URL: 'ws://sky-us.coflnet.com/modsocket'
+    WEBSOCKET_URL: 'ws://sky-us.coflnet.com/modsocket',
     //uses US socket instead
+    DELAY_BETWEEN_CLICKS: 50,
+    DELAY_TO_REMOVE_BED: 400
 }
 
 json2toml({ simple: true })
