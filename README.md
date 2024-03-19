@@ -4,7 +4,7 @@ My attempt to edit Luiz-Baf and port it into the new version.
 
 ## Is this bannable
 
-Yes, it is against the TOS of Hypixel, so don't use it if you don't want to risk that. Futhermore, this is my edit and I'm barely capable of coding.
+This is my edit and I'm barely capable of coding. This shit is pasted BS lmfao, use at your own risk. I haven't even tested it.
 
 ## Note
 
