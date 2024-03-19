@@ -163,9 +163,9 @@ export async function claimSoldItem(bot: MyBot): Promise<boolean> {
                     if (item?.nbt?.value?.display?.value?.Lore && JSON.stringify(item.nbt.value.display.value.Lore).includes('Sold for')) {
                         clickSlot = item.slot
                     }
-                    if (item && item.name === 'cauldron' && (item.nbt as any).value?.display?.value?.Name?.value?.toString().includes('Claim All')) {
+                    if (item && item.name === 'milk_bucket' && (item.nbt as any).value?.display?.value?.Name?.value?.toString().includes('Claim')) {
                         log(item)
-                        log('Found cauldron to claim all sold auctions -> clicking index ' + item.slot)
+                        log('Found milk_bucket to claim all sold auctions -> clicking index ' + item.slot)
                         clickWindow(bot, item.slot)
                         clearTimeout(timeout)
                         bot.removeAllListeners('windowOpen')

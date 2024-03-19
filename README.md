@@ -1,10 +1,10 @@
 # Edited BAF
 
-My attempt to edit Luiz-Baf and port it into the new version.
+My attempt to edit Luiz-Baf and port it into the new version. I have not imported Luiz-BAF yet cause i cba, I pasted some randoms bed spam tho.
 
 ## Is this bannable
 
-Yes, it is against the TOS of Hypixel, so don't use it if you don't want to risk that. Futhermore, this is my edit and I'm barely capable of coding.
+This is my edit and I'm barely capable of coding. This shit is pasted BS lmfao, use at your own risk. I haven't even tested it.
 
 ## Note
 
@@ -54,4 +54,5 @@ Edit any config
 - Implment Luiz-BAF 
 - More webhook + info 
 - Bug fixes (/cofl ping etc)
+- More config options (warp island or warp garden, finna be easy (maybe))
 - I don't know what else (suggest some pretty please)
