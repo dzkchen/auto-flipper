@@ -1,6 +1,6 @@
 # Edited BAF
 
-My attempt to edit Luiz-Baf and port it into the new version.
+My attempt to edit Luiz-Baf and port it into the new version. I have not imported Luiz-BAF yet cause i cba, I pasted some randoms bed spam tho.
 
 ## Is this bannable
 
